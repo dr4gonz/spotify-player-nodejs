@@ -13,17 +13,22 @@
         <input type="text" id="album">
         <button type="submit" name="button">Submit</button>
       </form>
+      <form id="artist-search">
+        <label>Search for artist:</label>
+        <input type="text" id="artist">
+        <button type="submit" name="button">Submit</button>
+      </form>
       <div class="container">
         <div class="row">
           <div class="search-results col-md-6">
             <h3>Search Results: </h3>
+            <div id="artist-image">
+            </div>
             <ul id="spotify-results">
-
             </ul>
           </div>
           <h3>Player</h3>
           <div id="player-widget" class="col-md-6">
-
           </div>
         </div>
       </div>
