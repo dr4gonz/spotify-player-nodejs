@@ -2,14 +2,19 @@ var SpotifySearch = require("./../js/spotify-search.js").searchModule;
 
 var showAlbum = function(album) {
   console.log(album);
-  var albumId = album.id
-  $("#spotify-results").append("<img src='"+album.images[2].url+"'><li id='album"+albumId+"'><a  class='widget-link'>"+album.name+"</a></li>");
+  var albumId = album.id;
+  $("#spotify-results").append("<img src='"+album.images[2].url+"'><li id='album"+albumId+"'><a  class='widget-link'>"+album.name+"</a> - <span id='artist-field"+albumId+"'</li>");
 
   $('#album'+albumId).click(function(){
     console.log(albumId);
     $("#player-widget").empty();
     $("#player-widget").append('<iframe src="https://embed.spotify.com/?uri=spotify:album:' + albumId + '" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>');
   });
+};
+
+var artistDisplay = function(albumId, artistName) {
+  console.log(artistName);
+  $("#artist-field"+albumId).text(artistName);
 };
 
 $(document).ready(function(){
@@ -19,7 +24,7 @@ $(document).ready(function(){
   $("#album-search").submit(function(event){
     event.preventDefault();
     var albumSearchTerm = $("#album").val();
-    currentSpotifySearch.searchAlbum(albumSearchTerm, showAlbum);
+    currentSpotifySearch.searchAlbum(albumSearchTerm, showAlbum, artistDisplay);
   });
 
 
