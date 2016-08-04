@@ -20,8 +20,6 @@ var artistDisplay = function(albumId, artistName) {
 var showArtist = function(artist) {
   console.log(artist);
   var artistId = artist.id;
-  $("#artist-image").empty();
-  $("#spotify-results").empty();
   $("#artist-image").append("<h3>"+artist.name+"</h3><img src='"+artist.images[2].url+"'>");
 };
 
@@ -42,11 +40,15 @@ $(document).ready(function(){
 
   $("#album-search").submit(function(event){
     event.preventDefault();
+    $("#spotify-results").empty();
+    $("#artist-image").empty();
     var albumSearchTerm = $("#album").val();
     currentSpotifySearch.searchAlbum(albumSearchTerm, showAlbum, artistDisplay);
   });
   $("#artist-search").submit(function(event){
     event.preventDefault();
+    $("#spotify-results").empty();
+    $("#artist-image").empty();
     var artistSearchTerm = $("#artist").val();
     currentSpotifySearch.searchArtist(artistSearchTerm, showArtist, albumDisplay);
   });
