@@ -1,4 +1,0 @@
-GET https://accounts.spotify.com/authorize/?client_id=93b1c30531134428ab07f844d303ba73&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A3000&scope=user-read-private%20user-read-email
-  then {
-
-  }
