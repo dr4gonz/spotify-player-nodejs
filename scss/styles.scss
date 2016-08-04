@@ -1,0 +1,28 @@
+$spotify-green : #2ebd59;
+$gray : rgb(96, 96, 96);
+
+body {
+  background-color: $spotify-green;
+}
+
+.album-img-thumb {
+  margin-right: 20px;
+}
+
+.list-group-item {
+  border: none;
+  background-color: #000;
+  border: 1px solid $gray;
+}
+
+.widget-link {
+  color: #999;
+  font-size: 1.5em;
+}
+
+.form-control {
+  width: 30%;
+}
+#artist-image {
+  margin-bottom: 20px;
+}

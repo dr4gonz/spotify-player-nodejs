@@ -1,3 +1,4 @@
+
 SpotifySearch = function() {};
 
 SpotifySearch.prototype.searchAlbum = function(searchParameter, showAlbum, artistDisplay) {
@@ -43,6 +44,8 @@ SpotifySearch.prototype.getAlbums = function(artistId, albumDisplay) {
     console.log(error.responseJSON.message);
   });
 };
+
+
 
 exports.searchModule = SpotifySearch;
 //search for artist
