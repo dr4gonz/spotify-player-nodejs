@@ -45,8 +45,4 @@ SpotifySearch.prototype.getAlbums = function(artistId, albumDisplay) {
   });
 };
 
-
-
 exports.searchModule = SpotifySearch;
-//search for artist
-//find artists albums by artist id

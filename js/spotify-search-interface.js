@@ -45,7 +45,7 @@ var spotifyLogIn = function() {
     .done(function (response) {
       console.log(response);
       for (i = 0; i< response.items.length; i++) {
-        showAlbum(response.items[i]);
+        showAlbum(response.items[i].album);
       }
     })
     .fail(function (err) {
